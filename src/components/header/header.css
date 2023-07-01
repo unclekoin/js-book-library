@@ -1,0 +1,33 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+	padding: 20px 10px;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 30px;
+}
+
+.menu__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+}
+
+.menu__counter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 24px;
+	height: 24px;
+	font-size: 12px;
+	font-weight: 600;
+	border: 1px solid var(--dark-color);
+	border-radius: 50%;
+}

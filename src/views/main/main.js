@@ -1,12 +1,14 @@
 import onChange from 'on-change';
 import { AbstractView } from '../../common/view.js';
 import { Header } from '../../components/header/header.js';
+import { Search } from '../../components/search/search.js';
+import './main.css';
 
 export class MainView extends AbstractView {
   state = {
     list: [],
     loading: false,
-    searchQuery: undefined,
+    searchQuery: '',
     offset: 0,
   };
 
@@ -26,6 +28,8 @@ export class MainView extends AbstractView {
 
   render() {
     const main = document.createElement('div');
+    main.classList.add('main');
+    main.append(new Search(this.state).render());
     this.app.innerHTML = '';
     this.app.append(main);
     this.renderHeader();

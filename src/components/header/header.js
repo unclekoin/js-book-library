@@ -8,7 +8,6 @@ export class Header extends DivComponent {
   }
 
   render() {
-    this.el.innerHTML = '';
     this.el.classList.add('header');
     this.el.innerHTML = `
 		<div>
@@ -24,7 +23,7 @@ export class Header extends DivComponent {
 				Избранное
 			</a>
 			<span class="menu__counter">
-					${this.appState.favorites.length}
+					<span>${this.appState.favorites.length}</span>
 				</span>
     </div>
 		`;

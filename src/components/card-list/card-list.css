@@ -1,0 +1,17 @@
+.card-list {
+  padding: 30px 0;
+}
+
+.card-list__heading {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.card-list__loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  font-size: 21px;
+  font-weight: 400px;
+}

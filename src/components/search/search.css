@@ -11,6 +11,7 @@
 	flex-grow: 1;
 	height: 56px;
 	padding: 0 12px 0 60px;
+	font-size: 16px;
 	color: var(--dark-grey-color);
 	background-color: var(--light-grey-color);
 	border: none;
@@ -41,10 +42,4 @@
 	border: 1px solid var(--dark-color);
 	border-radius: 5px;
 	cursor: pointer;
-	transition: all 0.2s linear;
-}
-
-.search__button:hover {
-	background-color: rgba(37, 37, 37, 0.85);
-	border-color: rgba(37, 37, 37, 0.85);
 }

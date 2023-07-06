@@ -1,30 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 :root {
-	--dark-color: #121212;
-	--dark-grey-color: #252525;
-	--grey-color: #656363;
-	--light-grey-color: #dedede;
-	--white-color: #fafafa;
+  --dark-color: #121212;
+  --dark-grey-color: #252525;
+  --grey-color: #656363;
+  --card-bg: #bbbbbb;
+  --light-grey-color: #dedede;
+  --white-color: #fafafa;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Roboto', Arial, Helvetica, sans-serif;
-	color: var(--dark-color);
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  color: var(--dark-color);
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 #root {
-	max-width: 800px;
-	margin: 0 auto;
+  max-width: 992px;
+  margin: 0 auto;
 }

@@ -22,10 +22,14 @@ export class MainView extends AbstractView {
     this.setTitle('Поиск книг');
   }
 
+  destroy() {
+    onChange.unsubscribe(this.appState);
+    onChange.unsubscribe(this.state);
+  }
+
   appStateHook(path) {
     if (path === 'favorites') {
-      console.log(path);
-      console.log(this.appState[path]);
+      this.render();
     }
   }
 
@@ -36,7 +40,6 @@ export class MainView extends AbstractView {
         this.state.searchQuery,
         this.state.offset,
       );
-      console.log(data);
       this.state.loading = false;
       this.state.numFound = data.numFound;
       this.state.list = data.docs;

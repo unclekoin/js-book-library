@@ -8,6 +8,16 @@ export class Card extends DivComponent {
     this.cardState = cardState;
   }
 
+	#addToFavorites() {
+		this.appState.favorites.push(this.cardState);
+	}
+
+  #deleteFromFavorites() {
+    this.appState.favorites = this.appState.favorites.filter(
+      (book) => book.key !== this.cardState.key,
+    );
+  }
+
   render() {
     this.el.classList.add('card');
     const isFavorite = this.appState.favorites.find(
@@ -44,10 +54,14 @@ export class Card extends DivComponent {
     	</div>
 		`;
 
+    if (isFavorite) {
+      const button = this.el.querySelector('.card__button');
+      button.addEventListener('click', this.#deleteFromFavorites.bind(this));
+    } else {
+			const button = this.el.querySelector('.card__button');
+			button.addEventListener('click', this.#addToFavorites.bind(this));
+		}
+
     return this.el;
   }
 }
-
-//  https://covers.openlibrary.org/b/olid/${this.cardState.cover_edition_key}-M.jpg
-// this.cardState.title
-// this.cardState.author_name
